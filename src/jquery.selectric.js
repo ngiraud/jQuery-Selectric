@@ -403,7 +403,8 @@
       if ( $selected.length > 1 && _this.state.multiple ) {
         selectedIndex = [];
         $selected.each(function() {
-          selectedIndex.push($(this).index());
+          // selectedIndex.push($(this).index());
+          selectedIndex.push($(_this.$element.find("option")).index(this));
         });
       }
 
